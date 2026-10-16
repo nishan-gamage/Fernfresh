@@ -11,8 +11,8 @@ export const site = {
     "Fern Fresh Clean provides premium residential cleaning, Airbnb and short-stay turnovers, end-of-tenancy and exterior care across Auckland. Vetted, insured cleaners and eco-friendly products.",
   phoneDisplay: "021 221 7625",
   phoneHref: "tel:+64212217625",
-  // Assumes the business mobile is on WhatsApp. Confirm with the client.
-  whatsapp: "64212217625",
+  // WhatsApp is a separate number from the call line: +64 22 398 0815.
+  whatsapp: "64223980815",
   email: "accounts@fernfreshclean.com",
   city: "Auckland",
   region: "Auckland",

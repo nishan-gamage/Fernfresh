@@ -41,7 +41,6 @@ Taken from the current site: phone, email, prices, service inclusions, "insured 
 
 New copy written for this site that the client must confirm:
 
-- WhatsApp is on 021 221 7625
 - Re-clean if reported within 24 hours (guarantee wording)
 - Cleaners are background-checked
 - Airbnb offer: linen change, restocking, photo report after each turnover, same-day changeovers, multi-listing discounts
