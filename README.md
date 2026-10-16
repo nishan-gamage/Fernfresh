@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fern Fresh Clean — website
 
-## Getting Started
+Premium marketing site for Fern Fresh Clean (Auckland), aimed at high-end homeowners,
+Airbnb/short-stay hosts and property managers. Replaces the Hostinger Horizons build at
+fernfreshclean.com.
 
-First, run the development server:
+Stack: Next.js 16 (App Router, Cache Components), Tailwind v4, lucide-react, bun.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bun install
+bun dev          # http://localhost:3000
+bun run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Pages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Route       | Purpose                                                        |
+| ----------- | -------------------------------------------------------------- |
+| `/`         | Hero + quick-quote bar, audiences, services, Airbnb, FAQ        |
+| `/services` | Home cleaning, add-ons, exterior services (anchor per service) |
+| `/airbnb`   | Short-stay turnover offer for hosts                            |
+| `/pricing`  | Prices from the current site                                   |
+| `/about`    | Story, mission, values                                         |
+| `/careers`  | Staff recruitment + application form                           |
+| `/book`     | Quote form + contact details (`/contact` redirects here)       |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Forms have no backend yet: they compose a message and open WhatsApp or the user's
+email app. Swap for a server action + database/email service when ready.
 
-## Learn More
+## Editing content
 
-To learn more about Next.js, take a look at the following resources:
+- Business details: `lib/site-config.ts` (null = hidden)
+- Services, prices, Airbnb inclusions: `lib/services.ts`
+- FAQs: `lib/faq.ts`
+- Photos: `public/images/` (Unsplash stock — replace with real job photos when available)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Confirm with the client before launch
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Taken from the current site: phone, email, prices, service inclusions, "insured & vetted",
+"eco-friendly", "satisfaction guaranteed", mission text.
 
-## Deploy on Vercel
+New copy written for this site that the client must confirm:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- WhatsApp is on 021 221 7625
+- Re-clean if reported within 24 hours (guarantee wording)
+- Cleaners are background-checked
+- Airbnb offer: linen change, restocking, photo report after each turnover, same-day changeovers, multi-listing discounts
+- "Usually the same day" quote turnaround; "within 24 hours" response
+- Service-area suburb list
+- Careers perks (flexible hours, training, pay on time)
+- Real logo (current mark in `components/logo.tsx` is a placeholder)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Reviews are deliberately omitted — the current site's testimonials look like template
+placeholders. Add real Google/Facebook reviews when available.
+
+Note: fernfreshclean.com currently serves an **expired SSL certificate**.
